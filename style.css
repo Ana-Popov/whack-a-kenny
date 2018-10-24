@@ -1,14 +1,14 @@
 html {
     box-sizing: border-box;
     font-size: 10px;
-    /*    background: url(styles/screen_shot_2015-08-27_at_3.51.45_pm.png);*/
+    font-family: 'Press Start 2P', cursive;
     background-repeat: repeat;
 }
 
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Amatic SC', cursive;
+   font-family: 'Press Start 2P', cursive;
 }
 
 h1 {
@@ -16,8 +16,7 @@ h1 {
     font-size: 6.5rem;
     line-height: 1;
     margin-bottom: 0;
-    font-family: 'Wallpoet', cursive;
-    text-shadow: -2.5px 5.5px 0 #f6f6f6, -0.5px -1.5px 0 #eeeeee, -2.5px 4px 0 #F8F8FF, -0.6px 0.3px 0 #0073ea8f;
+    color:#a2e0e2;
     padding-top: 20%;
 }
 
@@ -36,8 +35,6 @@ h1 {
     line-height: 1;
     font-size: 20px;
     border-radius: 1rem;
-
-
 }
 
 .game {
@@ -53,22 +50,20 @@ h1 {
 button.start,
 button.restart {
     background: url(styles/kenny_south_park_-_Google_Search.png);
-    font-family: 'Press Start 2P', cursive;
     color: black;
-    font-family: cursive;
-    font-size: 1.7em;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.4em;
     margin: 25px;
-    width: 140px;
+    width: 160px;
     height: 40px;
 }
 
-button.start.btn:hover {
+button.start:hover {
     opacity: 1
 }
 
 div #timer {
     color: black;
-    font-family: 'Press Start 2P', cursive;
     font-size: 1.4em;
     margin: 10px;
     width: 100%;
@@ -77,7 +72,7 @@ div #timer {
 
 .highscore {
     font-size: 1.5em;
-    font-family: 'Press Start 2P', cursive;
+/*    font-family: 'Press Start 2P', cursive;*/
     position: absolute;
     margin-left: 35px;
     width: 23%;
@@ -148,19 +143,14 @@ div #timer {
     justify-content: center;
     align-items: center;
 }
-.funkenny {
-    
-}
 
-.notkilled {
-    margin-left: 130px;
-}
 
 #click {
     width: 50%;
     font-family: 'Press Start 2P', cursive;
     position: absolute;
-    right: 90px;
+    font-size:1.2em;
+    right: 96px;
     top: 600px;
     padding: 10px;
 }

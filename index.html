@@ -19,7 +19,7 @@
         <div id="board">
            <div id="controls">
                 <button class="start" v-if="!inGame" v-on:click="start">Play game</button>
-                <button class="restart" v-if="ended" v-on:click="restart">Play again</button>
+                <button class="restart" v-if="ended" v-on:click="restart">Reset game</button>
                 <div v-if="inGame">
                     <div id="timer">{{seconds}} </div>
                 </div>
