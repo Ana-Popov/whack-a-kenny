@@ -1,0 +1,159 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    /*    background: url(styles/screen_shot_2015-08-27_at_3.51.45_pm.png);*/
+    background-repeat: repeat;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+    text-align: center;
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: 0;
+    font-family: 'Wallpoet', cursive;
+    text-shadow: -0.5px 18.5px 0 #2faf6885, 0.5px 0.5px 0 #2a7168, 0.5px -1px 0 #F8F8FF, 0.4px 0.3px 0 #272790;
+    padding-top: 25%;
+}
+
+#banner {
+    background-image: url(styles/screen_shot_2015-08-27_at_3.51.45_pm.png);
+    background-attachment: fixed;
+    height: 420px;
+    background-position: top;
+    opacity: 0.8;
+
+}
+
+.score {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0 3rem;
+    line-height: 1;
+    font-size: 20px;
+    border-radius: 1rem;
+   
+
+}
+
+.game {
+    width: 550px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-bottom: 8%;
+    padding-top: 3%;
+}
+
+button.start, button.restart {
+    background: url(styles/kenny_south_park_-_Google_Search.png);
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    font-family: cursive;
+    font-size: 1.7em;
+    margin: 25px;
+    width: 140px;
+    height: 40px;
+    
+}
+
+div #timer {
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.4em;
+    margin: 20px;
+    width: 100%;
+    padding: 5px;
+
+}
+
+.highscore {
+    font-size: 1.5em;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    margin-left: 35px;
+    width: 23%;
+}
+
+.score {
+    font-size: 1.3em;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    left: 100px;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    margin-right: 0;
+    overflow: hidden;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 10px;
+/*    padding-top: 10px;*/
+
+}
+
+.hole:after {
+    display: block;
+    background: url(styles/park.png) bottom center no-repeat;
+    background-size: 35%;
+    content: '';
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    z-index: 2;
+    bottom: -20px;
+}
+
+
+.whack {
+    background: url(styles/kenny.jpeg) bottom center no-repeat;
+    background-size: 40%;
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+#timer {
+    font-size: 20px;
+    width: 40px;
+    height: 20px;
+}
+
+.hole.kenny .whack {
+    top: 0;
+}
+
+.won {
+    margin-top:50px;
+    margin-left:180px;
+    margin-bottom: 25px;
+}
+.notkilled{
+    margin-left:130px;
+}
+
+#click {
+    width: 50%;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    right:90px;
+    top:600px;
+    padding: 5px;
+}

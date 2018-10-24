@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Whack A Kenny!</title>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div id="banner">
+            <h1>Whack-a-Kenny!</h1>
+        </div>
+        <div id="board">
+           <div id="controls">
+                <button class="start" v-if="!inGame" v-on:click="start">Play game</button>
+                <button class="restart" v-if="ended" v-on:click="restart">Play again</button>
+                <div v-if="inGame">
+                    <div id="timer">{{seconds}} </div>
+                </div>
+            </div>
+            <div v-if="!inGame && highscore != null" class="highscore">Highest Score - {{highscore}} whacks</div>
+            <div v-if="inGame" class="score">Your killed Kenny - {{score}} times </div>
+        </div>
+        <div id="click" v-if="ended">
+            <p>Number of clicks: {{click}}</p>
+        </div>
+        <div class="game" v-if="!ended">
+            <div v-for="i in 12" class="hole" :class="'hole' + i" v-on:click="click++">
+                <div class="whack" id="getKenny" v-on:click="hitKenny"></div>
+            </div>
+        </div>
+        <div class="won" v-if="ended">
+            <img v-if="score > 0" src="styles/killedKenny.jpg" alt="image-kenny-died">
+            <img class="notkilled" v-if="score == 0" src="styles/didntkill.jpg" alt="imageKennylives">
+        </div>
+
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
