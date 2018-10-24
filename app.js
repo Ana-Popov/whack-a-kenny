@@ -9,7 +9,7 @@ var app = new Vue({
         countSeconds: 0,
         click: 0,
         seconds: '',
-        highscore: localStorage["highest-score"]
+        highscore: localStorage.getItem("highest-score"),
     },
     
     methods: {
@@ -39,9 +39,11 @@ var app = new Vue({
         },
 
         highestScore: function () {
-            localStorage["last-score"] = app.score;
-            if (localStorage["last-score"] > localStorage["highest-score"] || localStorage["highest-score"] == null) {
-                localStorage["highest-score"] = localStorage["last-score"];
+            let highscore = localStorage.getItem("highsest-score");
+//            this.highestScore = 0;9
+            localStorage.getItem("last-score") = app.score;
+            if (localStorage.getItem("last-score") > localStorage.getItem("highest-score") || localStorage.getItem("highest-score") == null) {
+                localStorage.getItem("highest-score") = localStorage.getItem("last-score");
             }
         },
 
@@ -71,7 +73,6 @@ var app = new Vue({
                 alert("Hey cheater!");
             }
         },
-
         timer: function (seconds) {
             const counting = new Date().getTime() + 20000;
             let x = setInterval(() => {
