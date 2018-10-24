@@ -13,12 +13,12 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 6rem;
+    font-size: 6.5rem;
     line-height: 1;
     margin-bottom: 0;
     font-family: 'Wallpoet', cursive;
-    text-shadow: -0.5px 18.5px 0 #2faf6885, 0.5px 0.5px 0 #2a7168, 0.5px -1px 0 #F8F8FF, 0.4px 0.3px 0 #272790;
-    padding-top: 25%;
+    text-shadow: -2.5px 5.5px 0 #f6f6f6, -0.5px -1.5px 0 #eeeeee, -2.5px 4px 0 #F8F8FF, -0.6px 0.3px 0 #0073ea8f;
+    padding-top: 20%;
 }
 
 #banner {
@@ -36,7 +36,7 @@ h1 {
     line-height: 1;
     font-size: 20px;
     border-radius: 1rem;
-   
+
 
 }
 
@@ -50,7 +50,8 @@ h1 {
     padding-top: 3%;
 }
 
-button.start, button.restart {
+button.start,
+button.restart {
     background: url(styles/kenny_south_park_-_Google_Search.png);
     font-family: 'Press Start 2P', cursive;
     color: black;
@@ -59,17 +60,19 @@ button.start, button.restart {
     margin: 25px;
     width: 140px;
     height: 40px;
-    
+}
+
+button.start.btn:hover {
+    opacity: 1
 }
 
 div #timer {
     color: black;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.4em;
-    margin: 20px;
+    margin: 10px;
     width: 100%;
     padding: 5px;
-
 }
 
 .highscore {
@@ -102,8 +105,7 @@ div #timer {
     position: relative;
     justify-content: space-between;
     margin-top: 10px;
-/*    padding-top: 10px;*/
-
+    /*    padding-top: 10px;*/
 }
 
 .hole:after {
@@ -127,7 +129,7 @@ div #timer {
     width: 100%;
     height: 100%;
     transition: all 0.4s;
-    cursor: pointer;
+    cursor: crosshair;
 }
 
 #timer {
@@ -141,19 +143,24 @@ div #timer {
 }
 
 .won {
-    margin-top:50px;
-    margin-left:180px;
-    margin-bottom: 25px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.notkilled{
-    margin-left:130px;
+.funkenny {
+    
+}
+
+.notkilled {
+    margin-left: 130px;
 }
 
 #click {
     width: 50%;
     font-family: 'Press Start 2P', cursive;
     position: absolute;
-    right:90px;
-    top:600px;
-    padding: 5px;
+    right: 90px;
+    top: 600px;
+    padding: 10px;
 }
