@@ -22,19 +22,18 @@ h1 {
 
 #banner {
     background-image: url(styles/screen_shot_2015-08-27_at_3.51.45_pm.png);
-    background-attachment: fixed;
-    height: 420px;
-    background-position: top;
-    opacity: 0.8;
+    background-attachment:fixed;
+    background-size:contain;
+    height:400px;
+    background-position:top;
+/*    opacity: 0.7;*/
 
 }
-
 .score {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0 3rem;
-    line-height: 1;
-    font-size: 20px;
-    border-radius: 1rem;
+    font-size: 1.3em;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    left: 100px;
 }
 
 .game {
@@ -78,12 +77,6 @@ div #timer {
     width: 23%;
 }
 
-.score {
-    font-size: 1.3em;
-    font-family: 'Press Start 2P', cursive;
-    position: absolute;
-    left: 100px;
-}
 
 #controls {
     display: flex;
