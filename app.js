@@ -3,15 +3,15 @@ var app = new Vue({
     data: {
         score: 0,
         inGame: false,
-        ended: false, 
+        ended: false,
         punched: false,
         lastBox: '',
         countSeconds: 0,
         click: 0,
         seconds: '',
-        highscore: localStorage.getItem("highest-score"),
+        highscore: localStorage["highest-score"],
     },
-    
+
     methods: {
         start: function () {
             this.inGame = true;
@@ -39,11 +39,12 @@ var app = new Vue({
         },
 
         highestScore: function () {
-            let highscore = localStorage.getItem("highsest-score");
-//            this.highestScore = 0;9
-            localStorage.getItem("last-score") = app.score;
-            if (localStorage.getItem("last-score") > localStorage.getItem("highest-score") || localStorage.getItem("highest-score") == null) {
-                localStorage.getItem("highest-score") = localStorage.getItem("last-score");
+            localStorage["last-score"] = this.score;
+            let highscore = localStorage["highest-score"];
+            //            this.highestScore = 0;9
+            localStorage["last-score"] = app.score;
+            if (localStorage["last-score"] > localStorage["highest-score"] || localStorage["highest-score"] == null) {
+                localStorage["highest-score"] = localStorage["last-score"];
             }
         },
 
@@ -83,6 +84,7 @@ var app = new Vue({
                 if (distance <= 5) {
                     clearInterval(x);
                     app.seconds = "GAME OVER";
+                    app.highestScore();
                 }
             })
         },
