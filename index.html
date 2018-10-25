@@ -31,7 +31,7 @@
             <p>Number of clicks: {{click}}</p>
         </div>
         <div class="game" v-if="!ended">
-            <div v-for="i in 12" class="hole" :class="'hole' + i" v-on:click="click++">
+            <div v-for="i in 12" class="hole" :class="'hole' + i" v-on:click="checkClicks">
                 <div class="whack" id="getKenny" v-on:click="hitKenny"></div>
             </div>
         </div>
